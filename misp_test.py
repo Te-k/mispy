@@ -246,6 +246,7 @@ class MispAttrTest(unittest.TestCase):
         self.assertEqual(a.timestamp, 1445434872)
         self.assertEqual(a.comment, 'loooool')
         self.assertEqual(a.value, 'a283e768fa12ef33087f07b01f82d6dd')
+        self.assertEqual(a.value.__class__, str)
 
     def test_from_xml(self):
         s = r"""<Attribute>
